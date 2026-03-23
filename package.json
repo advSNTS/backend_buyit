@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/advSNTS/backend_buyit/issues"
   },
-  "homepage": "https://github.com/advSNTS/backend_buyit#readme"
+  "homepage": "https://github.com/advSNTS/backend_buyit#readme",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
 }
