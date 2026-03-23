@@ -20,7 +20,7 @@ async function init(){
         app.listen(port, ()=>{
             console.log(`Aplicación escuchando en el puerto ${3000}`)
         })
-    }catch(error){
+    }catch(err){
         console.err("Paila", err);
     }
     
