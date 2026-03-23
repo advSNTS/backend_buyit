@@ -3,8 +3,8 @@ import { sequelize } from "./database/database.js";
 
 const port = 3000;
 
-function init(){
-    sequelize.authenticate()
+async function init(){
+    await sequelize.authenticate()
     .then(() => {
         console.log("La conexión ha sido exitosa!!");
     })
