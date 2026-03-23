@@ -26,7 +26,7 @@ export const User = sequelize.define(
             allowNull: false,
             defaultValue: "no bio"
         },
-        created:{
+        createdAt:{
             type: DataTypes.DATE,
             allowNull: false,
             defaultValue: DataTypes.NOW
