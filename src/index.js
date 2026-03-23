@@ -7,3 +7,5 @@ function init(){
         console.log(`Aplicación escuchando en el puerto ${3000}`)
     })
 }
+
+init();
