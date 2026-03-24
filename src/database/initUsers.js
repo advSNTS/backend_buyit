@@ -114,4 +114,12 @@ const initUsers = [
         email: "andres.molina@techmail.com",
         password: "andres_ing_010"
     }
-]
+];
+
+export async function loadInitialUsers() {
+    const count = await User.count();
+    if(count === 0){
+        await User.bulkCreate(initUsers);
+        console.log("Datos creados");
+    }
+}
