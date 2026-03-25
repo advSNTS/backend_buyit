@@ -1,4 +1,5 @@
 import { User } from "../models/User.js";
+
 const initUsers = [
     {
         id: 1,
@@ -129,3 +130,11 @@ const initUsers = [
         password: "andres_ing_010"
     }
 ];
+
+export async function loadInitialUsers() {
+    const count = await User.count();
+    if(count === 0){
+        await User.bulkCreate(initUsers);
+        console.log("Datos creados");
+    }
+}
