@@ -64,9 +64,9 @@ export async function loadInitialReviews() {
         const count = await Review.count();
         if(count === 0){
             await Review.bulkCreate(initReviews)
-            console.log("Initial users creado");
+            console.log("Initial reviews creado");
         }else{
-            console.log("Initial users already loaded");
+            console.log("Initial reviews already loaded");
         }
     }catch(error){
         console.error("Paila en cargar reviews", error);
