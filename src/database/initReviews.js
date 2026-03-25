@@ -2,60 +2,60 @@ import { Review } from "../models/Review.js";
 
 const initReviews = [
     // Reviews para jdoe_92 (id: 1)
-    { like: true,  comment: "Excelente vendedor, envío rapidísimo.", followersCount: 3, userId: 1 },
-    { like: true,  comment: "Todo llegó en perfecto estado.", followersCount: 1, userId: 1 },
+    { like: true,  comment: "Excelente vendedor, envío rapidísimo.", followersCount: 3, userId: 1, productId: 1  },  // iPhone 13
+    { like: true,  comment: "Todo llegó en perfecto estado.",         followersCount: 1, userId: 1, productId: 2  },  // MacBook Air
 
     // Reviews para carla_shop (id: 2)
-    { like: false, comment: "El producto no era como se describía.", followersCount: 0, userId: 2 },
-    { like: true,  comment: "Muy buena atención al cliente.", followersCount: 2, userId: 2 },
+    { like: false, comment: "El producto no era como se describía.",  followersCount: 0, userId: 2, productId: 17 },  // Chaqueta de cuero
+    { like: true,  comment: "Muy buena atención al cliente.",         followersCount: 2, userId: 2, productId: 20 },  // Gafas Ray-Ban
 
     // Reviews para mike_retro (id: 3)
-    { like: true,  comment: "Consola en perfecto estado, muy honesto.", followersCount: 5, userId: 3 },
-    { like: true,  comment: null, followersCount: 0, userId: 3 },
+    { like: true,  comment: "Consola en perfecto estado, muy honesto.", followersCount: 5, userId: 3, productId: 14 }, // Game Boy Advance
+    { like: true,  comment: null,                                       followersCount: 0, userId: 3, productId: 11 }, // PS4 Slim
 
     // Reviews para ana_luz (id: 4)
-    { like: true,  comment: "Súper recomendada, trato amable.", followersCount: 1, userId: 4 },
+    { like: true,  comment: "Súper recomendada, trato amable.",       followersCount: 1, userId: 4, productId: 19 },  // Mochila Samsonite
 
     // Reviews para gamer_pro (id: 5)
-    { like: false, comment: "Tardó más de lo prometido en enviar.", followersCount: 0, userId: 5 },
-    { like: true,  comment: "Al final todo bien, buen precio.", followersCount: 2, userId: 5 },
+    { like: false, comment: "Tardó más de lo prometido en enviar.",   followersCount: 0, userId: 5, productId: 21 },  // Silla gamer
+    { like: true,  comment: "Al final todo bien, buen precio.",       followersCount: 2, userId: 5, productId: 6  },  // Teclado mecánico
 
     // Reviews para sofia_trades (id: 6)
-    { like: true,  comment: "Vendedora de confianza, ya es la tercera compra.", followersCount: 7, userId: 6 },
-    { like: true,  comment: null, followersCount: 0, userId: 6 },
-    { like: true,  comment: "Siempre cumple con lo pactado.", followersCount: 4, userId: 6 },
+    { like: true,  comment: "Vendedora de confianza, ya es la tercera compra.", followersCount: 7, userId: 6, productId: 3  }, // Galaxy S22
+    { like: true,  comment: null,                                               followersCount: 0, userId: 6, productId: 7  }, // Mouse Logitech
+    { like: true,  comment: "Siempre cumple con lo pactado.",                   followersCount: 4, userId: 6, productId: 9  }, // Webcam
 
     // Reviews para el_turco_77 (id: 7)
-    { like: false, comment: "No respondió los mensajes por días.", followersCount: 0, userId: 7 },
+    { like: false, comment: "No respondió los mensajes por días.",    followersCount: 0, userId: 7, productId: 5  },  // Monitor LG
 
     // Reviews para lucy_finds (id: 8)
-    { like: true,  comment: "Ropa vintage impecable, muy buena calidad.", followersCount: 6, userId: 8 },
-    { like: true,  comment: "Los libros llegaron bien embalados.", followersCount: 3, userId: 8 },
+    { like: true,  comment: "Ropa vintage impecable, muy buena calidad.", followersCount: 6, userId: 8, productId: 16 }, // Zapatillas Nike
+    { like: true,  comment: "Los libros llegaron bien embalados.",        followersCount: 3, userId: 8, productId: 18 }, // Reloj Casio
 
     // Reviews para pablo_dev (id: 9)
-    { like: true,  comment: null, followersCount: 0, userId: 9 },
+    { like: true,  comment: null,                                     followersCount: 0, userId: 9, productId: 10 },  // SSD Kingston
 
     // Reviews para mariana_k (id: 10)
-    { like: true,  comment: "Funkos en estado de colección, perfectos.", followersCount: 8, userId: 10 },
-    { like: false, comment: "Una figura tenía una pequeña rajadura.", followersCount: 1, userId: 10 },
+    { like: true,  comment: "Funkos en estado de colección, perfectos.", followersCount: 8, userId: 10, productId: 25 }, // Funko Darth Vader
+    { like: false, comment: "Una figura tenía una pequeña rajadura.",    followersCount: 1, userId: 10, productId: 25 }, // Funko Darth Vader
 
     // Reviews para tomas_flip (id: 11)
-    { like: true,  comment: "Muy buen precio y comunicación fluida.", followersCount: 2, userId: 11 },
+    { like: true,  comment: "Muy buen precio y comunicación fluida.", followersCount: 2, userId: 11, productId: 13 },  // Xbox Series S
 
     // Reviews para nati_busca (id: 12)
-    { like: true,  comment: "Compradora seria, pagó al instante.", followersCount: 0, userId: 12 },
-    { like: true,  comment: null, followersCount: 1, userId: 12 },
+    { like: true,  comment: "Compradora seria, pagó al instante.",    followersCount: 0, userId: 12, productId: 23 },  // Cafetera Oster
+    { like: true,  comment: null,                                     followersCount: 1, userId: 12, productId: 22 },  // Lámpara Xiaomi
 
     // Reviews para checho_gamer (id: 13)
-    { like: false, comment: "El joystick no funcionaba bien al recibirlo.", followersCount: 0, userId: 13 },
-    { like: true,  comment: "Resolvió el problema rápido, lo recomiendo.", followersCount: 3, userId: 13 },
+    { like: false, comment: "El joystick no funcionaba bien al recibirlo.",  followersCount: 0, userId: 13, productId: 15 }, // Control DualSense
+    { like: true,  comment: "Resolvió el problema rápido, lo recomiendo.",   followersCount: 3, userId: 13, productId: 15 }, // Control DualSense
 
     // Reviews para vale_creativa (id: 14)
-    { like: true,  comment: "Las manualidades son hermosas, muy detalladas.", followersCount: 9, userId: 14 },
-    { like: true,  comment: "Packaging cuidadísimo, se nota el amor por lo que hace.", followersCount: 5, userId: 14 },
+    { like: true,  comment: "Las manualidades son hermosas, muy detalladas.",          followersCount: 9, userId: 14, productId: 22 }, // Lámpara Xiaomi
+    { like: true,  comment: "Packaging cuidadísimo, se nota el amor por lo que hace.", followersCount: 5, userId: 14, productId: 24 }, // Parlante JBL
 
     // Reviews para el_ingeniero (id: 15)
-    { like: true,  comment: "Todo el equipo funcionando al 100%.", followersCount: 2, userId: 15 },
+    { like: true,  comment: "Todo el equipo funcionando al 100%.",    followersCount: 2, userId: 15, productId: 8  },  // Auriculares Sony
 ];
 
 export async function loadInitialReviews() {
