@@ -15,7 +15,8 @@ export const updateUser = async (req, res) => {
     const id = req.params.id;
     const user = await User.findByPk(id);
     try{
-        await user.update(req.body);
+        const updatedUser = await user.update(req.body);
+        return res.json(updatedUser);
     }catch(error){
         console.log("Paila en update user");
     }
