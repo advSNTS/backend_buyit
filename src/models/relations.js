@@ -10,7 +10,7 @@ export function setupRelations(){
     });
 
     Review.belongsTo(User, {
-    oreignKey: "userId",
+    foreignKey: "userId",
     as: 'user'
     });
 }
