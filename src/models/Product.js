@@ -9,14 +9,6 @@ export const Product = sequelize.define(
             primaryKey: true,
             autoIncrement: true
         },
-        userId:{
-            type: DataTypes.INTEGER,
-            allowNull: false,
-            references: {
-                model: "users",
-                key: "id"
-            }
-       },
         name:{
             type: DataTypes.STRING,
             allowNull: false
