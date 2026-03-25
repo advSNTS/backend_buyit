@@ -45,6 +45,6 @@ export async function loadInitialReviews() {
             console.log("Initial products already loaded");
         }
     }catch(error){
-        console.error("Paila en cargar reviews", error);
+        console.error("Paila en cargar products", error);
     }
 };
