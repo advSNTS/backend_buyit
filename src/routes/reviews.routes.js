@@ -1,10 +1,12 @@
 import { Router } from "express";
 
+import { getReviews, createReview, updateReview, deleteReview } from "../controller/review.controller";
+
 const router = Router();
 
-router.get("/reviews", {})
-router.post("/reviews", {})
-router.put("/reviews/:id", {})
+router.get("/reviews", getReviews)
+router.post("/reviews", createReview)
+router.put("/reviews/:id", updateReview)
 router.delete("/reviews/:id", {})
 
 export default router
