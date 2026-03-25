@@ -31,5 +31,8 @@ export const Product = sequelize.define(
             defaultValue: DataTypes.NOW
         }
 
+    },
+    {
+        timestamps:false
     }
 )
