@@ -3,8 +3,10 @@ import { sequelize } from "./database/database.js";
 import { loadInitialUsers } from "./database/initUsers.js";
 import { loadInitialReviews } from "./database/initReviews.js";
 import { setupRelations } from "./models/relations.js";
+import { loadInitialProducts } from "./database/initProducts.js";
 import "./models/User.js";
 import "./models/Review.js";
+
 
 const port = 3000;
 
@@ -24,6 +26,7 @@ async function init(){
         setupRelations();
 
         await loadInitialUsers();
+        await loadInitialProducts();
         await loadInitialReviews();
 
         app.listen(port, ()=>{
