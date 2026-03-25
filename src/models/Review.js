@@ -17,6 +17,14 @@ export const Review = sequelize.define(
                 key: "id"
             }
        },
+       productId:{
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            references: {
+                model: "products",
+                key: "id"
+            }
+       },
        like: {
             type:DataTypes.BOOLEAN,
             allowNull: false
