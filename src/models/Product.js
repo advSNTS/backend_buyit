@@ -17,6 +17,10 @@ export const Product = sequelize.define(
             type: DataTypes.STRING,
             allowNull: false
         },
+        imagenURL:{
+            type: DataTypes.STRING,
+            allowNull: true
+        },
 
     }
 )
