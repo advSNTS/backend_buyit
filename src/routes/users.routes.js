@@ -6,4 +6,4 @@ router.get("/users", {});
 
 router.post("/users", {});
 
-router.put("/users/:id", {})
+router.put("/users/:id", {});
