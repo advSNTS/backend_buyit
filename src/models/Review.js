@@ -9,6 +9,14 @@ export const Review = sequelize.define(
             primaryKey: true,
             autoIncrement: true
        },
+       userId:{
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            references: {
+                model: "user",
+                key: "id"
+            }
+       },
        like: {
             type:DataTypes.BOOLEAN,
             allowNull: false
