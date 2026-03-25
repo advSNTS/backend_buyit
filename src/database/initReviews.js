@@ -1,5 +1,4 @@
 import { Review } from "../models/Review.js";
-import { User } from "../models/User.js";
 
 const initReviews = [
     // Reviews para jdoe_92 (id: 1)
