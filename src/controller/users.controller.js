@@ -17,6 +17,6 @@ export const updateUser = async (req, res) => {
     try{
         await user.update(req.body);
     }catch(error){
-        console.log("Paila en update user")
+        console.log("Paila en update user");
     }
 }
