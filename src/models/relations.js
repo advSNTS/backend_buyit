@@ -7,10 +7,11 @@ export function setupRelations(){
         as: 'reviews',
         onDelete: "cascade",
         hooks: true
-    })
-}
+    });
 
-Review.belongsTo(User, {
+    Review.belongsTo(User, {
     oreignKey: "userId",
     as: 'user',
-})
+    });
+}
+
