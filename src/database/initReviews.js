@@ -1,4 +1,6 @@
 import { Review } from "../models/Review.js";
+import { User } from "../models/User.js";
+import { loadInitialUsers } from "./initUsers.js";
 
 const initReviews = [
     // Reviews para jdoe_92 (id: 1)
@@ -58,7 +60,16 @@ const initReviews = [
     { like: true,  comment: "Todo el equipo funcionando al 100%.", followersCount: 2, userId: 15 },
 ];
 
-export async function initializeReviews() {
-    await Review.bulkCreate(initReviews, { ignoreDuplicates: true });
-    console.log("Reviews iniciales creadas.");
+export async function loadInitialReviews() {
+    try{
+        const count = await User.count();
+        if(count === 0){
+            await User.bulkCreate(loadInitialUsers)
+            console.log("Initial users creado");
+        }else{
+            console.log("Initial users already loaded");
+        }
+    }catch(error){
+        console.error("Paila en cargar reviews", error);
+    }
 }
