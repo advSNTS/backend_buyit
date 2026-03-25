@@ -4,7 +4,7 @@ import { getReviews, createReview, updateReview, deleteReview } from "../control
 
 const router = Router();
 
-router.get("/reviews", getReviews)
+router.get("/reviews", getReviews);
 router.post("/reviews", createReview)
 router.put("/reviews/:id", updateReview)
 router.delete("/reviews/:id", deleteReview)
