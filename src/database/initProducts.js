@@ -42,7 +42,7 @@ export async function loadInitialReviews() {
             await Product.bulkCreate(initProducts)
             console.log("Initial products creado");
         }else{
-            console.log("Initial reviews already loaded");
+            console.log("Initial products already loaded");
         }
     }catch(error){
         console.error("Paila en cargar reviews", error);
