@@ -21,7 +21,7 @@ export const Product = sequelize.define(
             type: DataTypes.STRING,
             allowNull: true
         },
-        descripcion:{
+        description:{
             type: DataTypes.STRING,
             allowNull: true
         }
