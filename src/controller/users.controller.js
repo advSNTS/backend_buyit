@@ -20,3 +20,8 @@ export const updateUser = async (req, res) => {
         console.log("Paila en update user");
     }
 }
+
+export const deleteUser = async (req, res) => {
+    const id = req.params.id;
+    const user = await User.findByPk(id);
+}
