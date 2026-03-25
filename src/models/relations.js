@@ -13,5 +13,17 @@ export function setupRelations(){
     foreignKey: "userId",
     as: 'user'
     });
+
+    Product.hasMany(Review, {
+        foreignKey: "productId",
+        as: 'reviews',
+        onDelete: "cascade",
+        hooks: true
+    });
+
+    Review.belongsTo(Product, {
+        foreignKey: "productId",
+        as: 'product'
+    });
 }
 
