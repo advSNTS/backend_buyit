@@ -11,7 +11,7 @@ export function setupRelations(){
 
     Review.belongsTo(User, {
     oreignKey: "userId",
-    as: 'user',
+    as: 'user'
     });
 }
 
