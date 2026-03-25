@@ -34,3 +34,17 @@ const initProducts = [
     { name: "Parlante Bluetooth", brand: "JBL" },
     { name: "Figura Funko Pop Darth Vader", brand: "Funko", description: "En caja, sin abrir, edición especial." },
 ];
+
+export async function loadInitialReviews() {
+    try{
+        const count = await Product.count();
+        if(count === 0){
+            await Product.bulkCreate(initProducts)
+            console.log("Initial products creado");
+        }else{
+            console.log("Initial reviews already loaded");
+        }
+    }catch(error){
+        console.error("Paila en cargar reviews", error);
+    }
+};
