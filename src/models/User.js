@@ -2,7 +2,7 @@ import { DataTypes } from "sequelize";
 import { sequelize } from "../database/database.js";
 
 export const User = sequelize.define(
-    "Users",
+    "users",
     {
         id: {
             type: DataTypes.INTEGER,
@@ -35,7 +35,10 @@ export const User = sequelize.define(
         email: {
             type: DataTypes.STRING,
             allowNull: false,
-            unique: true
+            unique: true,
+            validate:{
+                isEmail: true
+            }
         },
         password: {
             type: DataTypes.STRING,

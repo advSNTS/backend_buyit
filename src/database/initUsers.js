@@ -2,6 +2,7 @@ import { User } from "../models/User.js";
 
 const initUsers = [
     {
+        id: 1,
         username: "jdoe_92",
         name: "John Doe",
         pfpURL: null,
@@ -10,6 +11,7 @@ const initUsers = [
         password: "hashed_password_123"
     },
     {
+        id: 2,
         username: "carla_shop",
         name: "Carla Benítez",
         pfpURL: null,
@@ -17,6 +19,7 @@ const initUsers = [
         password: "secure_pass_456"
     },
     {
+        id: 3,
         username: "mike_retro",
         name: "Miguel Ángel",
         pfpURL: null,
@@ -25,6 +28,7 @@ const initUsers = [
         password: "password_secret_789"
     },
     {
+        id: 4,
         username: "ana_luz",
         name: "Ana Lucía",
         pfpURL: null,
@@ -32,6 +36,7 @@ const initUsers = [
         password: "ana_password_321"
     },
     {
+        id: 5,
         username: "gamer_pro",
         name: "Roberto Gómez",
         pfpURL: null,
@@ -40,6 +45,7 @@ const initUsers = [
         password: "setup_gamer_2024"
     },
     {
+        id: 6,
         username: "sofia_trades",
         name: "Sofía Martínez",
         pfpURL: null,
@@ -48,6 +54,7 @@ const initUsers = [
         password: "sofia_secure_101"
     },
     {
+        id: 7,
         username: "el_turco_77",
         name: "Ramón Haddad",
         pfpURL: null,
@@ -55,6 +62,7 @@ const initUsers = [
         password: "turco_pass_202"
     },
     {
+        id: 8,
         username: "lucy_finds",
         name: "Luciana Ferreira",
         pfpURL: null,
@@ -63,6 +71,7 @@ const initUsers = [
         password: "lucy_vintage_303"
     },
     {
+        id: 9,
         username: "pablo_dev",
         name: "Pablo Suárez",
         pfpURL: null,
@@ -70,6 +79,7 @@ const initUsers = [
         password: "pablo_dev_404"
     },
     {
+        id: 10,
         username: "mariana_k",
         name: "Mariana Kovač",
         pfpURL: null,
@@ -78,6 +88,7 @@ const initUsers = [
         password: "mariana_pass_505"
     },
     {
+        id: 11,
         username: "tomas_flip",
         name: "Tomás Vidal",
         pfpURL: null,
@@ -85,6 +96,7 @@ const initUsers = [
         password: "tomas_flip_606"
     },
     {
+        id: 12,
         username: "nati_busca",
         name: "Natalia Ríos",
         pfpURL: null,
@@ -93,6 +105,7 @@ const initUsers = [
         password: "nati_rios_707"
     },
     {
+        id: 13,
         username: "checho_gamer",
         name: "Sergio Pedraza",
         pfpURL: null,
@@ -100,6 +113,7 @@ const initUsers = [
         password: "checho_g_808"
     },
     {
+        id: 14,
         username: "vale_creativa",
         name: "Valentina Cruz",
         pfpURL: null,
@@ -108,6 +122,7 @@ const initUsers = [
         password: "vale_creative_909"
     },
     {
+        id: 15,
         username: "el_ingeniero",
         name: "Andrés Molina",
         pfpURL: null,
