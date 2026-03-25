@@ -9,7 +9,7 @@ export const Product = sequelize.define(
             primaryKey: true,
             autoIncrement: true
         },
-        nombre:{
+        name:{
             type: DataTypes.STRING,
             allowNull: false
         },
