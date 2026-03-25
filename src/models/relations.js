@@ -9,3 +9,8 @@ export function setupRelations(){
         hooks: true
     })
 }
+
+Review.belongsTo(User, {
+    oreignKey: "userId",
+    as: 'user'
+})
