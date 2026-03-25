@@ -36,7 +36,7 @@ const initProducts = [
 ];
 
 
-export async function loadInitialReviews() {
+export async function loadInitialProducts() {
     try{
         const count = await Product.count();
         if(count === 0){
