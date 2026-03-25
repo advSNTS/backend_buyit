@@ -2,7 +2,7 @@ import { DataTypes } from "sequelize";
 import { sequelize } from "../database/database.js";
 
 export const Review = sequelize.define(
-    "Reviews",
+    "reviews",
     {
        id: {
             type: DataTypes.INTEGER,
@@ -13,7 +13,7 @@ export const Review = sequelize.define(
             type: DataTypes.INTEGER,
             allowNull: false,
             references: {
-                model: "user",
+                model: "users",
                 key: "id"
             }
        },
