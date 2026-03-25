@@ -13,4 +13,10 @@ export const createUser = async (req, res) => {
 
 export const updateUser = async (req, res) => {
     const id = req.params.id;
+    const user = User.findByPk(id);
+    try{
+
+    }catch(error){
+        
+    }
 }
