@@ -1,5 +1,6 @@
 import { User } from "./User.js";
 import { Review } from "./Review.js";
+import { Product } from "./Product.js";
 
 export function setupRelations(){
     User.hasMany(Review, {
