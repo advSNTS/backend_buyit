@@ -1,6 +1,5 @@
 import { Review } from "../models/Review.js";
 import { User } from "../models/User.js";
-import { loadInitialUsers } from "./initUsers.js";
 
 const initReviews = [
     // Reviews para jdoe_92 (id: 1)
@@ -62,9 +61,9 @@ const initReviews = [
 
 export async function loadInitialReviews() {
     try{
-        const count = await User.count();
+        const count = await Review.count();
         if(count === 0){
-            await User.bulkCreate(loadInitialUsers)
+            await Review.bulkCreate(initReviews)
             console.log("Initial users creado");
         }else{
             console.log("Initial users already loaded");
