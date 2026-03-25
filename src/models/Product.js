@@ -13,7 +13,7 @@ export const Product = sequelize.define(
             type: DataTypes.STRING,
             allowNull: false
         },
-        marca:{
+        brand:{
             type: DataTypes.STRING,
             allowNull: false
         },
