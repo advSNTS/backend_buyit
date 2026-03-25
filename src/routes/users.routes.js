@@ -4,7 +4,7 @@ import { getUsers } from "../controller/users.controller.js";
 
 const router = Router();
 
-router.get("/users",  {});
+router.get("/users",  getUsers);
 
 router.post("/users", {});
 
