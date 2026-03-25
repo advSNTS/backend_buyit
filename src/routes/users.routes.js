@@ -4,4 +4,4 @@ const router = Router();
 
 router.get("/users", {})
 
-router.post()
+router.post("/users")
