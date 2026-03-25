@@ -1,1 +1,3 @@
-export const getUsers = async (req, res)
+export const getUsers = async (req, res) => {
+    
+}
