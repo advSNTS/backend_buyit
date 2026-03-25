@@ -7,6 +7,6 @@ const router = Router();
 router.get("/reviews", getReviews);
 router.post("/reviews", createReview);
 router.put("/reviews/:id", updateReview);
-router.delete("/reviews/:id", deleteReview)
+router.delete("/reviews/:id", deleteReview);
 
 export default router
