@@ -67,3 +67,22 @@ export const deleteProduct = async (req, res) => {
         return res.status(500).json({ message: "Error al eliminar el producto", error: error.message });
     }
 };
+export const getProductReviews = async (req, res) => {
+    try {
+        const { id } = req.params;
+
+        const productWithReviews = await Product.findByPk(id, {
+            include: {
+                model: Review,
+                as: 'reviews'
+            }
+        });
+
+        if (!productWithReviews) {
+            return res.status(404).json({ message: "Producto no encontrado" });
+        }
+        return res.json(productWithReviews.reviews); 
+    } catch (error) {
+        return res.status(500).json({ message: "Error al obtener reseñas", error: error.message });
+    }
+};
