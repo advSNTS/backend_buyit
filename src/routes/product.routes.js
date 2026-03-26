@@ -4,7 +4,8 @@ import { getProducts, getProductById, createProduct, updateProduct, deleteProduc
 
 const router = Router();
 
-router.get("/products", getProducts)
+router.get("/products", getProducts);
+router.post("/products", createProduct);
 
 
 export default router;
