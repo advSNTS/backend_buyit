@@ -27,3 +27,22 @@ export const deleteReview = async (req, res) => {
     await review.destroy();
     return res.sendStatus(204);
 }
+
+export const getReviewById = async (req, res) => {
+    try {
+        const { id } = req.params;
+        const review = await Review.findByPk(id);
+        if (!review) {
+            return res.status(404).json({ 
+                message: "Reseña no encontrada" 
+            });
+        }
+        return res.json(review);
+    } catch (error) {
+        console.log("Error en getReviewById:", error);
+        return res.status(500).json({ 
+            message: "Error interno al buscar la reseña",
+            error: error.message 
+        });
+    }
+};

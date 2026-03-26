@@ -28,3 +28,19 @@ export const deleteUser = async (req, res) => {
     await user.destroy();
     return res.sendStatus(204);
 }
+
+export const getUserById = async (req, res) => {
+    try {
+        const { id } = req.params;
+        const user = await User.findByPk(id);
+        if (!user) {
+            return res.status(404).json({ 
+                message: "Usuario no encontrado" 
+            });
+        }
+
+        return res.json(user);
+    } catch (error) {
+        console.error("Error en getUserById:", error);
+    }
+}
