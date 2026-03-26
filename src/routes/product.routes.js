@@ -5,3 +5,6 @@ import { getProducts, getProductById, createProduct, updateProduct, deleteProduc
 const router = Router();
 
 router.get("/products", getProducts)
+
+
+export default router;
