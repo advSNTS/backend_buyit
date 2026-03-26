@@ -29,7 +29,6 @@ export const deleteUser = async (req, res) => {
     return res.sendStatus(204);
 }
 
-
 export const getUserById = async (req, res) => {
     try {
         const { id } = req.params;
