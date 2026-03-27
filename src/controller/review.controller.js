@@ -1,4 +1,5 @@
 import {Review} from "../models/Review.js"
+import {User} from "../models/User.js"
 
 export const getReviews = async (req, res) => {
     const reviews = await Review.findAll();
@@ -46,3 +47,22 @@ export const getReviewById = async (req, res) => {
         });
     }
 };
+
+export const getReviewsByUserId = async (req, res) => {
+    try {
+        const { userId } = req.params;
+
+        const user = await User.findByPk(userId);
+        if (!user) {
+            return res.status(404).json({ message: "Usuario no encontrado" });
+        }
+
+        const reviews = await Review.findAll({
+            where: { userId }
+        });
+
+        return res.json(reviews);
+    } catch (error) {
+        console.error("Paila", error);
+    }
+}
