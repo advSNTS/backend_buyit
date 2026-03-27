@@ -32,11 +32,6 @@ export const Review = sequelize.define(
        comment: {
             type:DataTypes.STRING,
             allowNull: true
-       },
-       followersCount: {
-            type:DataTypes.INTEGER,
-            allowNull:false,
-            defaultValue: 0
        }
     },
     {

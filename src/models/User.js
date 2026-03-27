@@ -43,7 +43,12 @@ export const User = sequelize.define(
         password: {
             type: DataTypes.STRING,
             allowNull: false
-        }
+        },
+        followersCount: {
+            type:DataTypes.INTEGER,
+            allowNull:false,
+            defaultValue: 0
+       }
     },
     {
         timestamps: false
