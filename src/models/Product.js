@@ -25,14 +25,22 @@ export const Product = sequelize.define(
             type: DataTypes.STRING,
             allowNull: true
         },
+        percentageLike:{
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            defaultValue: 0
+        },
+        range:{
+            type: DataTypes.STRING,
+            allowNull: true
+        },
         created:{
-            type:DataTypes.DATE,
-            allowNull:false,
+            type: DataTypes.DATE,
+            allowNull: false,
             defaultValue: DataTypes.NOW
         }
-
     },
     {
-        timestamps:false
+        timestamps: false
     }
 )
