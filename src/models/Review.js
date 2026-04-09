@@ -26,16 +26,20 @@ export const Review = sequelize.define(
             }
        },
        like: {
-            type:DataTypes.BOOLEAN,
+            type: DataTypes.BOOLEAN,
             allowNull: false
        },
        comment: {
-            type:DataTypes.STRING,
+            type: DataTypes.STRING,
             allowNull: true
+       },
+       comments: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            defaultValue: 0
        }
     },
     {
         timestamps: true
     }
-
 )
