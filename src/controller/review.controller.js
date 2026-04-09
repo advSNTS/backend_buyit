@@ -6,12 +6,12 @@ const reviewInclude = [
     {
         model: User,
         as: "user",
-        attributes: ["name", "pfpURL"]
+        attributes: ["id", "name", "pfpURL"]
     },
     {
         model: Product,
         as: "product",
-        attributes: ["name", "imageURL", "percentageLike", "range"]
+        attributes: ["id", "name", "imageURL", "percentageLike", "range"]
     }
 ];
 
