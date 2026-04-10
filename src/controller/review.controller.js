@@ -1,75 +1,50 @@
-import { Review }   from "../models/Review.js"
-import { User }     from "../models/User.js"
-import { Product }  from "../models/Product.js"
-
-const reviewInclude = [
-    {
-        model: User,
-        as: "user",
-        attributes: ["id", "name", "pfpURL"]
-    },
-    {
-        model: Product,
-        as: "product",
-        attributes: ["id", "name", "imageURL", "percentageLike", "range"]
-    }
-];
+import {Review} from "../models/Review.js"
+import {User} from "../models/User.js"
 
 export const getReviews = async (req, res) => {
-    try {
-        const reviews = await Review.findAll({ include: reviewInclude });
-        return res.json(reviews);
-    } catch (error) {
-        console.error("Paila en getReviews:", error);
-        return res.status(500).json({ message: "Error al obtener reseñas", error: error.message });
-    }
+    const reviews = await Review.findAll();
+    return res.json(reviews);
 }
 
 export const createReview = async (req, res) => {
-    try {
-        const newReview = await Review.create(req.body);
-        return res.json(newReview);
-    } catch (error) {
-        console.error("Paila en createReview:", error);
-        return res.status(500).json({ message: "Error al crear reseña", error: error.message });
-    }
+    const newReview = await Review.create(req.body);
+    return res.json(newReview);
 }
 
 export const updateReview = async (req, res) => {
+    const id = req.params.id;
+    const review = await Review.findByPk(id);
     try {
-        const review = await Review.findByPk(req.params.id);
-        if (!review) return res.status(404).json({ message: "Reseña no encontrada" });
-
         const updatedReview = await review.update(req.body);
         return res.json(updatedReview);
     } catch (error) {
-        console.error("Paila en updateReview:", error);
-        return res.status(500).json({ message: "Error al actualizar reseña", error: error.message });
+        console.log("Paila en update review");
     }
 }
 
 export const deleteReview = async (req, res) => {
-    try {
-        const review = await Review.findByPk(req.params.id);
-        if (!review) return res.status(404).json({ message: "Reseña no encontrada" });
-
-        await review.destroy();
-        return res.sendStatus(204);
-    } catch (error) {
-        console.error("Paila en deleteReview:", error);
-        return res.status(500).json({ message: "Error al eliminar reseña", error: error.message });
-    }
+    const id = req.params.id;
+    const review = await Review.findByPk(id);
+    await review.destroy();
+    return res.sendStatus(204);
 }
 
 export const getReviewById = async (req, res) => {
     try {
-        const review = await Review.findByPk(req.params.id, { include: reviewInclude });
-        if (!review) return res.status(404).json({ message: "Reseña no encontrada" });
-
+        const { id } = req.params;
+        const review = await Review.findByPk(id);
+        if (!review) {
+            return res.status(404).json({ 
+                message: "Reseña no encontrada" 
+            });
+        }
         return res.json(review);
     } catch (error) {
-        console.error("Paila en getReviewById:", error);
-        return res.status(500).json({ message: "Error interno al buscar la reseña", error: error.message });
+        console.log("Error en getReviewById:", error);
+        return res.status(500).json({ 
+            message: "Error interno al buscar la reseña",
+            error: error.message 
+        });
     }
 };
 
@@ -78,16 +53,16 @@ export const getReviewsByUserId = async (req, res) => {
         const { userId } = req.params;
 
         const user = await User.findByPk(userId);
-        if (!user) return res.status(404).json({ message: "Usuario no encontrado" });
+        if (!user) {
+            return res.status(404).json({ message: "Usuario no encontrado" });
+        }
 
         const reviews = await Review.findAll({
-            where: { userId },
-            include: reviewInclude
+            where: { userId }
         });
 
         return res.json(reviews);
     } catch (error) {
-        console.error("Paila en getReviewsByUserId:", error);
-        return res.status(500).json({ message: "Error al obtener reseñas del usuario", error: error.message });
+        console.error("Paila", error);
     }
 }
