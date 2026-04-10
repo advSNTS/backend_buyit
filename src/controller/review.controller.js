@@ -49,17 +49,23 @@ export const updateReview = async (req, res) => {
 }
 
 export const deleteReview = async (req, res) => {
-    try {
-        const review = await Review.findByPk(req.params.id);
-        if (!review) return res.status(404).json({ message: "Reseña no encontrada" });
+  try {
+    const { id } = req.params;
 
-        await review.destroy();
-        return res.sendStatus(204);
-    } catch (error) {
-        console.error("Paila en deleteReview:", error);
-        return res.status(500).json({ message: "Error al eliminar reseña", error: error.message });
+    const review = await Review.findByPk(id);
+
+    if (!review) {
+      return res.status(404).json({ message: "Review no encontrada" });
     }
-}
+
+    await review.destroy();
+
+    return res.status(200).json({ message: "Review eliminada correctamente" });
+  } catch (error) {
+    console.error(error);
+    return res.status(500).json({ message: "Error al eliminar la review" });
+  }
+};
 
 export const getReviewById = async (req, res) => {
     try {
