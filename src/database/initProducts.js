@@ -24,17 +24,17 @@ const initProducts = [
 
     // Aseo personal y hogar
     { id: 16, name: "Papel higiénico 4 rollos",        brand: "Scott",       imageURL: "https://exitocol.vtexassets.com/arquivos/ids/32752803/PAPEL-HIGIENICO-TRIPLE-HOJA-XXG-ULTR-ROSAL-4-UNIDAD-3319532_a.jpg?v=639089249590500000", percentageLike: 90, range: "$8.000 - $14.000", description: "Presentación común en grandes superficies." },
-    { id: 17, name: "Jabón de lavar platos 400 ml",    brand: "Axion",       imageURL: "", percentageLike: 87, range: "$5.000 - $9.000", description: "Desengrasante líquido para limpieza diaria de vajilla." },
-    { id: 18, name: "Detergente en polvo 1 kg",        brand: "Fab",         imageURL: "", percentageLike: 84, range: "$14.000 - $24.000", description: "Para ropa de uso diario." },
-    { id: 19, name: "Shampoo 400 ml",                  brand: "Sedal",       imageURL: "", percentageLike: 86, range: "$12.000 - $20.000", description: "Cuidado capilar de uso frecuente para toda la familia." },
-    { id: 20, name: "Crema dental 75 ml",              brand: "Colgate",     imageURL: "", percentageLike: 92, range: "$6.000 - $12.000", description: "Pasta dental de uso diario para higiene oral y cuidado de encías." },
+    { id: 17, name: "Jabón de lavar platos 400 ml",    brand: "Axion",       imageURL: "https://exitocol.vtexassets.com/arquivos/ids/32031034/Lavaloza-Liquido-Blancox-Lozacrem-Limon-Y-Aloe-X-400ml-597398_a.jpg?v=639015796629100000", percentageLike: 87, range: "$5.000 - $9.000", description: "Desengrasante líquido para limpieza diaria de vajilla." },
+    { id: 18, name: "Detergente en polvo 1 kg",        brand: "Fab",         imageURL: "https://exitocol.vtexassets.com/arquivos/ids/29082376/Detergente-En-Polvo-Ariel-Doble-Poder-x-1-kg-1384919_a.jpg?v=638878412843600000", percentageLike: 84, range: "$14.000 - $24.000", description: "Para ropa de uso diario." },
+    { id: 19, name: "Shampoo 400 ml",                  brand: "Sedal",       imageURL: "https://exitocol.vtexassets.com/arquivos/ids/32542187/Shampoo-Pantene-PrO-V-Restauracin-400-Ml-716621_a.jpg?v=639068489182700000", percentageLike: 86, range: "$12.000 - $20.000", description: "Cuidado capilar de uso frecuente para toda la familia." },
+    { id: 20, name: "Crema dental 75 ml",              brand: "Colgate",     imageURL: "https://exitocol.vtexassets.com/arquivos/ids/27624162/Crema-Dental-Menta-X-75-ml-6370_a.jpg?v=638833641230730000", percentageLike: 92, range: "$6.000 - $12.000", description: "Pasta dental de uso diario para higiene oral y cuidado de encías." },
 
     // Congelados, conservas y bebidas
-    { id: 21, name: "Atún en agua 160 g",              brand: "Van Camp's",  imageURL: "", percentageLike: 89, range: "$7.000 - $13.000", description: "Lata individual para almuerzos rápidos." },
-    { id: 22, name: "Sopa instantánea",                brand: "Maggi",       imageURL: "", percentageLike: 80, range: "$3.000 - $6.000", description: "Opción rápida para una comida ligera en pocos minutos." },
-    { id: 23, name: "Mayonesa 500 g",                  brand: "Fruco",       imageURL: "", percentageLike: 88, range: "$11.000 - $19.000", description: "Salsa cremosa para sándwiches, ensaladas y comidas rápidas." },
-    { id: 24, name: "Agua mineral 600 ml",             brand: "Brisa",       imageURL: "", percentageLike: 84, range: "$2.000 - $4.000", description: "Bebida sin gas para hidratación diaria dentro y fuera de casa." },
-    { id: 25, name: "Arequipe 250 g",                  brand: "Alpina",      imageURL: "", percentageLike: 91, range: "$9.000 - $16.000", description: "Postre y acompañante muy común en Colombia." },
+    { id: 21, name: "Atún en agua 160 g",              brand: "Van Camp's",  imageURL: "https://colombinacontentmanager-prd.s3.us-east-1.amazonaws.com/Representados/7702367002620_A1R1_es.jpg", percentageLike: 89, range: "$7.000 - $13.000", description: "Lata individual para almuerzos rápidos." },
+    { id: 22, name: "Sopa instantánea",                brand: "Maggi",       imageURL: "https://mercadomadrid.com.co/14226-superlarge_default_2x/sopa-deli-nudos-la-sopera-instantanea-costilla-sobre-87gramos.jpg", percentageLike: 80, range: "$3.000 - $6.000", description: "Opción rápida para una comida ligera en pocos minutos." },
+    { id: 23, name: "Mayonesa 500 g",                  brand: "Fruco",       imageURL: "https://olimpica.vtexassets.com/arquivos/ids/1426080/7701008844261.jpg?v=638518094031530000", percentageLike: 88, range: "$11.000 - $19.000", description: "Salsa cremosa para sándwiches, ensaladas y comidas rápidas." },
+    { id: 24, name: "Agua mineral 600 ml",             brand: "Brisa",       imageURL: "https://exitocol.vtexassets.com/arquivos/ids/31434736/Agua-Normal-600-ml-973621_a.jpg?v=638967505377030000", percentageLike: 84, range: "$2.000 - $4.000", description: "Bebida sin gas para hidratación diaria dentro y fuera de casa." },
+    { id: 25, name: "Arequipe 250 g",                  brand: "Alpina",      imageURL: "https://stockimages.tiendasd1.com/stockimages.tiendasd1.com/kobastockimages/IMAGENES/12000257/arequipe-latti-250-g-01.png", percentageLike: 91, range: "$9.000 - $16.000", description: "Postre y acompañante muy común en Colombia." },
 ];
 
 export async function loadInitialProducts() {
