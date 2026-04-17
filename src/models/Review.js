@@ -6,11 +6,12 @@ export const Review = sequelize.define(
     {
        id: {
             type: DataTypes.INTEGER,
-            primaryKey: true,
-            autoIncrement: true
+          autoIncrement: true,
+          primaryKey: true
+
        },
        userId:{
-            type: DataTypes.INTEGER,
+            type: DataTypes.STRING,
             allowNull: false,
             references: {
                 model: "users",
