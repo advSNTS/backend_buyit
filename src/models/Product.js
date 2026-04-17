@@ -5,7 +5,7 @@ export const Product = sequelize.define(
     "products",
     {
         id:{
-            type: DataTypes.INTEGER,
+            type: DataTypes.STRING,
             primaryKey: true,
             autoIncrement: true
         },
