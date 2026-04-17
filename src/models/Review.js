@@ -5,12 +5,13 @@ export const Review = sequelize.define(
     "reviews",
     {
        id: {
-            type: DataTypes.STRING,
-            primaryKey: true,
-            autoIncrement: true
+            type: DataTypes.INTEGER,
+          autoIncrement: true,
+          primaryKey: true
+
        },
        userId:{
-            type: DataTypes.INTEGER,
+            type: DataTypes.STRING,
             allowNull: false,
             references: {
                 model: "users",
